@@ -40,4 +40,9 @@ public class ItemController {
     public Item findItemById(@PathVariable("id") Long itemId) {
         return itemService.findById(itemId);
     }
+
+    @DeleteMapping("/{id}")
+    public Item removeItemById(@PathVariable("id") Long itemId) {
+        return itemService.removeById(itemId);
+    }
 }

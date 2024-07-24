@@ -24,4 +24,10 @@ public class ItemService {
         return itemRepository.findById(itemId)
                 .orElseThrow(() -> new IllegalArgumentException("상품이 존재하지 않습니다."));
     }
+
+    public Item removeById(Long itemId) {
+        Item findItem = findById(itemId);
+        itemRepository.delete(findItem);
+        return findItem;
+    }
 }
