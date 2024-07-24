@@ -4,7 +4,6 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import shop.soseok.domain.Item;
 import shop.soseok.dto.PostItemRequest;
@@ -35,5 +34,10 @@ public class ItemController {
         }
 
         return itemService.save(postItemRequest.toEntity());
+    }
+
+    @GetMapping("/{id}")
+    public Item findItemById(@PathVariable("id") Long itemId) {
+        return itemService.findById(itemId);
     }
 }

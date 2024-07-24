@@ -19,4 +19,9 @@ public class ItemService {
     public Item save(Item item) {
         return itemRepository.save(item);
     }
+
+    public Item findById(Long itemId) {
+        return itemRepository.findById(itemId)
+                .orElseThrow(() -> new IllegalArgumentException("상품이 존재하지 않습니다."));
+    }
 }
