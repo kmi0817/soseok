@@ -41,6 +41,14 @@ public class ItemController {
         return itemService.findById(itemId);
     }
 
+    @PutMapping("/{id}")
+    public Item updateItemById(
+            @PathVariable("id") Long itemId,
+            @RequestBody @Valid PostPutItemRequest postPutItemRequest
+    ) {
+        return itemService.updateById(itemId, postPutItemRequest.toEntity());
+    }
+
     @DeleteMapping("/{id}")
     public Item removeItemById(@PathVariable("id") Long itemId) {
         return itemService.removeById(itemId);

@@ -25,6 +25,16 @@ public class ItemService {
                 .orElseThrow(() -> new IllegalArgumentException("상품이 존재하지 않습니다."));
     }
 
+    public Item updateById(Long itemId, Item item) {
+        Item findItem = findById(itemId);
+        findItem.setName(item.getName());
+        findItem.setPrice(item.getPrice());
+        findItem.setCategory(item.getCategory());
+        findItem.setStatus(item.getStatus());
+        findItem.setDescription(item.getDescription());
+        return itemRepository.save(findItem);
+    }
+
     public Item removeById(Long itemId) {
         Item findItem = findById(itemId);
         itemRepository.delete(findItem);
