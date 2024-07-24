@@ -2,6 +2,7 @@ package shop.soseok.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import shop.soseok.constant.ItemCategory;
 import shop.soseok.constant.ItemStatus;
 
 import java.time.LocalDateTime;
@@ -23,6 +24,10 @@ public class Item {
 
     @Enumerated(value = EnumType.STRING)
     @Column(nullable = false)
+    private ItemCategory category;
+
+    @Enumerated(value = EnumType.STRING)
+    @Column(nullable = false)
     private ItemStatus status;
 
     @Column(length = 1000)
@@ -35,9 +40,10 @@ public class Item {
     private LocalDateTime updateAt;
 
     @Builder
-    public Item(String name, int price, ItemStatus status, String description) {
+    public Item(String name, int price, ItemCategory category, ItemStatus status, String description) {
         this.name = name;
         this.price = price;
+        this.category = category;
         this.status = status;
         this.description = description;
     }

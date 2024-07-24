@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.hibernate.validator.constraints.Length;
+import shop.soseok.constant.ItemCategory;
 import shop.soseok.constant.ItemStatus;
 import shop.soseok.domain.Item;
 
@@ -22,6 +23,9 @@ public class PostItemRequest {
     @NotNull(message = "가격은 필수 입력 값입니다.")
     private int price;
 
+    @NotBlank(message = "상품 카테고리는 필수 입력 값입니다.")
+    private String category;
+
     // TODO: ItemStatus 값만 허용하도록 validation 설정
     @NotBlank(message = "상품 상태는 필수 입력 값입니다.")
     private String status;
@@ -32,6 +36,7 @@ public class PostItemRequest {
         return Item.builder()
                 .name(name)
                 .price(price)
+                .category(ItemCategory.valueOf(category))
                 .status(ItemStatus.valueOf(status))
                 .description(description)
                 .build();
