@@ -9,11 +9,13 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter
+@Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "item_id", updatable = false)
+    @Setter(AccessLevel.NONE)
     private Long id;
 
     @Column(nullable = false)
@@ -34,6 +36,7 @@ public class Item {
     private String description;
 
     @Column(name = "create_at")
+    @Setter(AccessLevel.NONE)
     private LocalDateTime createAt;
 
     @Column(name = "update_at")

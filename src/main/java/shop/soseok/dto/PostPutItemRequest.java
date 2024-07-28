@@ -15,7 +15,7 @@ import shop.soseok.domain.Item;
 @AllArgsConstructor
 @ToString
 @Getter
-public class PostItemRequest {
+public class PostPutItemRequest {
     @NotBlank(message = "상품명은 필수 입력 값입니다.")
     @Length(max = 255, message = "상품명이 너무 깁니다.")
     private String name;
