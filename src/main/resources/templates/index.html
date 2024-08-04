@@ -1,41 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="utf-8" />
     <title>소석</title>
-    <link rel="stylesheet" href="resources/static/css/style.css">
+    <link rel="stylesheet" href="resources/static/css/style.css" />
 </head>
 <body>
-    <div id="left-menu">
-        <nav>
-            <ul>
-                <li>RING</li>
-                <li>BRACELET</li>
-                <li>NECKLACE</li>
-                <li>BOOKMARK</li>
-                <li>KEY_RING</li>
-                <li>고객센터</li>
-            </ul>
-        </nav>
-    </div>
-    <div id="right-content">
-        <header>
-            <h3>SOSEOK</h3>
-            <div>
-                <a href="#">로그인/회원가입</a>
-                <a href="#">장바구니</a>
-            </div>
-        </header>
-        <section>
-            신상품
-        </section>
-        <section>
-            베스트셀러
-        </section>
-        <footer>
-            <p>소석 사업자 정보</p>
-        </footer>
-    </div>
+<input id="toggle-menu-btn" type="checkbox" />
+<div id="left-menu">
+    <nav>
+        <ul>
+            <li><a href="#">RING</a></li>
+            <li><a href="#">BRACELET</a></li>
+            <li><a href="#">NECKLACE</a></li>
+            <li><a href="#">BOOKMARK</a></li>
+            <li><a href="#">KEYRING</a></li>
+            <li><a href="#">고객센터</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="right-content">
+    <header>
+        <div class="input-container">
+            <label id="toggle-menu-label" for="toggle-menu-btn">
+                <img class="icon-img" src="resources/static/img/menu.png" />
+            </label>
+        </div>
+        <h3>SOSEOK</h3>
+        <div>
+            <a href="#">로그인/회원가입</a>
+            <a href="#">장바구니</a>
+        </div>
+    </header>
+    <section>신상품</section>
+    <section>베스트셀러</section>
+    <footer>
+        <p>소석 사업자 정보</p>
+    </footer>
+</div>
 </body>
 <script src="resources/static/js/javascript.js"></script>
 </html>

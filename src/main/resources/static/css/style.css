@@ -1,0 +1,71 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-img {
+  height: 20px;
+  object-fit: contain;
+}
+
+#left-menu {
+  background-color: #f6f5f2;
+  height: 100%;
+  padding: 30px;
+  padding-top: 50px;
+  overflow-x: hidden;
+  position: absolute;
+  transform: translatex(-110%);
+  transition: transform 0.4s ease-in-out;
+}
+
+#left-menu nav ul li {
+  list-style: none;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+#left-menu nav ul li a {
+  color: #362222;
+}
+
+#toggle-menu-label {
+  position: absolute;
+  z-index: 999;
+  cursor: pointer;
+}
+
+#toggle-menu-btn {
+  display: none;
+}
+
+#toggle-menu-btn:checked ~ #left-menu {
+  transform: translateX(0px);
+}
+
+#toggle-menu-btn:checked ~ #right-content header #toggle-menu-label img {
+  content: url("/resources/static/img/keyboard_double_arrow_left.png");
+}
+
+#right-content header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
