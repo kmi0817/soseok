@@ -58,14 +58,29 @@ button {
   content: url("/resources/static/img/keyboard_double_arrow_left.png");
 }
 
+#right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #right-content header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: 20px;
+}
+
+section {
+  width: 80%;
 }
 
 .input-container {
   display: flex;
   align-items: center;
+}
+
+footer {
+  width: 100%;
 }
