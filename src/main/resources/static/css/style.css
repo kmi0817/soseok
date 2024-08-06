@@ -20,6 +20,7 @@ button {
 }
 
 #left-menu {
+  z-index: 999;
   background-color: #f6f5f2;
   height: 100%;
   padding: 30px;
@@ -54,8 +55,24 @@ button {
   transform: translateX(0px);
 }
 
+#toggle-menu-btn:checked ~ #right-content-overlay {
+  display: block;
+}
+
 #toggle-menu-btn:checked ~ #right-content header #toggle-menu-label img {
   content: url("/resources/static/img/keyboard_double_arrow_left.png");
+}
+
+#right-content-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: transform 0.4s ease;
+  z-index: 998;
 }
 
 #right-content {
