@@ -133,7 +133,8 @@ main {
 }
 
 footer {
-  width: 100%;
+  width: 80%;
+  padding: 20px 0px;
 }
 
 @media (max-width: 900px) {
