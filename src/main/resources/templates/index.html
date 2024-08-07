@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8" />
     <title>소석</title>
@@ -27,7 +27,7 @@
                 <img class="icon-img" src="resources/static/img/menu.png" alt="메뉴" />
             </label>
         </div>
-        <h1 class="font-size-18">SOSEOK</h1>
+        <h1 class="font-size-18" th:text="${test}">SOSEOK</h1>
         <div>
             <a href="#">
                 <img class="icon-img"
@@ -48,9 +48,19 @@
     <main>
         <section>
             <h2 class="font-size-15">Newly Arrived</h2>
+            <ul class="display-items">
+                <li class="display-square-image" th:each="imageName : ${newlyArrived}">
+                    <img th:src="@{|resources/static/img/items/${imageName}|}" />
+                </li>
+            </ul>
         </section>
         <section>
             <h2 class="font-size-15">Best Sellers</h2>
+            <ul class="display-items">
+                <li class="display-square-image" th:each="imageName : ${bestSellers}">
+                    <img th:src="@{|resources/static/img/items/${imageName}|}" />
+                </li>
+            </ul>
         </section>
     </main>
     <footer>
