@@ -135,6 +135,9 @@ main {
 footer {
   width: 80%;
   padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media (max-width: 900px) {
