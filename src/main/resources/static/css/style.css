@@ -95,6 +95,9 @@ button {
   justify-content: space-between;
   width: 100%;
   padding: 20px;
+  position: fixed;
+  top: 0;
+  z-index: 997;
 }
 
 main {
@@ -102,6 +105,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding-top: 64px;
 }
 
 .input-container {
