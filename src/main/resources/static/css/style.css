@@ -1,0 +1,153 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-15 {
+  font-size: 15px;
+}
+
+.icon-img {
+  height: 20px;
+  object-fit: contain;
+}
+
+#left-menu {
+  z-index: 999;
+  background-color: #f6f5f2;
+  height: 100%;
+  padding: 30px;
+  padding-top: 50px;
+  overflow-x: hidden;
+  position: absolute;
+  transform: translatex(-110%);
+  transition: transform 0.4s ease-in-out;
+}
+
+#left-menu nav ul li {
+  list-style: none;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+#left-menu nav ul li a {
+  color: #362222;
+}
+
+#toggle-menu-label {
+  position: absolute;
+  z-index: 999;
+  cursor: pointer;
+}
+
+#toggle-menu-btn {
+  display: none;
+}
+
+#toggle-menu-btn:checked ~ #left-menu {
+  transform: translateX(0px);
+}
+
+#toggle-menu-btn:checked ~ #right-content-overlay {
+  display: block;
+}
+
+#toggle-menu-btn:checked ~ #right-content header #toggle-menu-label img {
+  content: url("/resources/static/img/keyboard_double_arrow_left.png");
+}
+
+#right-content-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: transform 0.4s ease;
+  z-index: 998;
+}
+
+#right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#right-content header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+}
+
+main {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.display-items {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.display-square-image {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.display-square-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  width: 80%;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .display-items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .display-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

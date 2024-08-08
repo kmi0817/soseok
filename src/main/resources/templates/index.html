@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>소석</title>
+    <link rel="stylesheet" href="resources/static/css/style.css" />
+</head>
+<body>
+<input id="toggle-menu-btn" type="checkbox" />
+<div id="left-menu">
+    <nav>
+        <ul>
+            <li><a href="#">RING</a></li>
+            <li><a href="#">BRACELET</a></li>
+            <li><a href="#">NECKLACE</a></li>
+            <li><a href="#">BOOKMARK</a></li>
+            <li><a href="#">KEYRING</a></li>
+            <li><a href="#">고객센터</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="right-content-overlay"></div>
+<div id="right-content">
+    <header>
+        <div class="input-container">
+            <label id="toggle-menu-label" for="toggle-menu-btn">
+                <img class="icon-img" src="resources/static/img/menu.png" alt="메뉴" />
+            </label>
+        </div>
+        <h1 class="font-size-18">SOSEOK</h1>
+        <div>
+            <a href="#">
+                <img class="icon-img"
+                     src="resources/static/img/person.png"
+                     title="로그인/회원가입"
+                     alt="로그인/회원가입"
+                />
+            </a>
+            <a href="#">
+                <img class="icon-img"
+                     src="resources/static/img/shopping_cart.png"
+                     title="장바구니"
+                     alt="장바구니"
+                />
+            </a>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2 class="font-size-15">Newly Arrived</h2>
+            <ul class="display-items">
+                <li class="display-square-image" th:each="imageName : ${newlyArrived}">
+                    <img th:src="@{|resources/static/img/items/${imageName}|}" />
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="font-size-15">Best Sellers</h2>
+            <ul class="display-items">
+                <li class="display-square-image" th:each="imageName : ${bestSellers}">
+                    <img th:src="@{|resources/static/img/items/${imageName}|}" />
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <a href="https://www.instagram.com/soseok_?igsh=MTFnYW14MWtoMHFrYw==">
+            <img
+                    class="icon-img"
+                    src="resources/static/img/Instagram_Glyph_Gradient.png"
+                    title="Instagram Logo"
+                    alt="Instagram Logo"
+            />
+        </a>
+        <a href="https://github.com/kmi0817">
+            <img
+                    class="icon-img"
+                    src="resources/static/img/github-mark.png"
+                    title="Instagram Logo"
+                    alt="Instagram Logo"
+            />
+        </a>
+    </footer>
+</div>
+</body>
+<script src="resources/static/js/javascript.js"></script>
+</html>
