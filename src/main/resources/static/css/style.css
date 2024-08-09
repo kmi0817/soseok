@@ -44,7 +44,7 @@ button {
   padding-top: 50px;
   overflow-x: hidden;
   position: absolute;
-  transform: translatex(-110%);
+  transform: translateX(-110%);
   transition: transform 0.4s ease-in-out;
 }
 
