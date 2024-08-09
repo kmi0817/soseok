@@ -43,7 +43,7 @@ button {
   padding: 30px;
   padding-top: 50px;
   overflow-x: hidden;
-  position: absolute;
+  position: fixed;
   transform: translateX(-110%);
   transition: transform 0.4s ease-in-out;
 }
