@@ -6,12 +6,22 @@
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.header-up {
+  /* added in js by scroll down */
+  top: -64px;
+}
+
+.header-down {
+  top: 0;
 }
 
 .font-size-18 {
@@ -34,8 +44,8 @@ button {
   padding: 30px;
   padding-top: 50px;
   overflow-x: hidden;
-  position: absolute;
-  transform: translatex(-110%);
+  position: fixed;
+  transform: translateX(-110%);
   transition: transform 0.4s ease-in-out;
 }
 
@@ -49,14 +59,26 @@ button {
   color: #362222;
 }
 
+#close-menu-label {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  cursor: pointer;
+}
+
 #toggle-menu-label {
   position: absolute;
   z-index: 999;
   cursor: pointer;
 }
 
+#close-menu-btn,
 #toggle-menu-btn {
   display: none;
+}
+
+#toggle-menu-btn:checked {
+  z-index: 999;
 }
 
 #toggle-menu-btn:checked ~ #left-menu {
@@ -65,10 +87,6 @@ button {
 
 #toggle-menu-btn:checked ~ #right-content-overlay {
   display: block;
-}
-
-#toggle-menu-btn:checked ~ #right-content header #toggle-menu-label img {
-  content: url("/resources/static/img/keyboard_double_arrow_left.png");
 }
 
 #right-content-overlay {
@@ -95,6 +113,10 @@ button {
   justify-content: space-between;
   width: 100%;
   padding: 20px;
+  position: fixed;
+  z-index: 997;
+  transition: top 0.4s ease-in-out;
+  background: #fff;
 }
 
 main {
@@ -102,6 +124,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding-top: 64px;
 }
 
 .input-container {

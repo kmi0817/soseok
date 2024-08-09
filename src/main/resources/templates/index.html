@@ -8,6 +8,14 @@
 <body>
 <input id="toggle-menu-btn" type="checkbox" />
 <div id="left-menu">
+    <input id="close-menu-btn" type="button" />
+    <label id="close-menu-label" for="close-menu-btn">
+        <img
+                class="icon-img"
+                src="resources/static/img/close.png"
+                alt="메뉴"
+        />
+    </label>
     <nav>
         <ul>
             <li><a href="#">RING</a></li>
@@ -21,13 +29,13 @@
 </div>
 <div id="right-content-overlay"></div>
 <div id="right-content">
-    <header>
+    <header class="header-down">
         <div class="input-container">
             <label id="toggle-menu-label" for="toggle-menu-btn">
                 <img class="icon-img" src="resources/static/img/menu.png" alt="메뉴" />
             </label>
         </div>
-        <h1 class="font-size-18">SOSEOK</h1>
+        <h1 class="font-size-18"><a href="/">SOSEOK</a></h1>
         <div>
             <a href="#">
                 <img class="icon-img"
