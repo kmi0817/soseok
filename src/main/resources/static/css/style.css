@@ -58,14 +58,26 @@ button {
   color: #362222;
 }
 
+#close-menu-label {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  cursor: pointer;
+}
+
 #toggle-menu-label {
   position: absolute;
   z-index: 999;
   cursor: pointer;
 }
 
+#close-menu-btn,
 #toggle-menu-btn {
   display: none;
+}
+
+#toggle-menu-btn:checked {
+  z-index: 999;
 }
 
 #toggle-menu-btn:checked ~ #left-menu {
@@ -74,10 +86,6 @@ button {
 
 #toggle-menu-btn:checked ~ #right-content-overlay {
   display: block;
-}
-
-#toggle-menu-btn:checked ~ #right-content header #toggle-menu-label img {
-  content: url("/resources/static/img/keyboard_double_arrow_left.png");
 }
 
 #right-content-overlay {

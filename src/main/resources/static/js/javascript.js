@@ -22,3 +22,7 @@ const showHeader = () => {
   header.classList.add("header-down");
   header.classList.remove("header-up");
 };
+
+document.querySelector("#close-menu-btn").addEventListener("click", () => {
+  document.querySelector("#toggle-menu-btn").click();
+});
